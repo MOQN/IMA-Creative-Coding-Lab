@@ -1,0 +1,163 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background: #f3f3f9;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+hr {
+  border: 0.5px solid black;
+  margin: 20px 0 50px 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+canvas {
+  display: block;
+}
+
+#title-container {
+  background-color: white;
+  padding: 30px;
+  width: 16%;
+  min-width: 215px;
+  max-width: 480px;
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  text-align: left;
+}
+
+#project-box-container {
+  position: absolute;
+  left: 24%;
+  width: 76%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-box {
+  z-index: 100;
+  margin: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* cursor: pointer; */
+}
+
+.project-title {
+  /* background-color: blueviolet; */
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.project-student-name {
+  /*  background-color: blue; */
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.prev-next-button-container {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  #title-container {
+    width: calc(100% - 120px);
+    min-width: none;
+    max-width: none;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  #project-box-container {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* INDEX PAGE */
+
+.main-title-container {
+/*   background: cyan; */
+  position: absolute;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.main-title {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.main-sub {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.main-text {
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-section {
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  margin: 0 10px;
+  
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}

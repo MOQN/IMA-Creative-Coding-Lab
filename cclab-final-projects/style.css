@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;700;800&display=swap");
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --text-color: #000000;
+  --link-color: #000000;
+  --link-hover-color: #ffffff;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background: linear-gradient(
+    -65deg,
+    #e9ff39,
+    #8cff1f,
+    #00c6cc,
+    #f08ed3,
+    #ed3737
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 30s infinite;
+  color: var(--text-color);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+canvas {
+  display: block;
+}
+
+/* INDEX PAGE */
+
+.main-title-container {
+  position: absolute;
+  max-width: 1500px;
+  left: 25px;
+  top: 50px;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 260px;
+  font-weight: 100;
+  line-height: 0.85;
+}
+
+.main-semester {
+  font-size: 75px;
+}
+
+.main-section-container {
+  position: fixed;
+  right: 100px;
+  bottom: 70px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.section-text {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.section-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.section-link {
+  margin: 10px 0;
+
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.section-link:hover {
+  background: linear-gradient(
+    -65deg,
+    #e9ff39,
+    #8cff1f,
+    #00c6cc,
+    #f08ed3,
+    #ed3737
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 400% 400%;
+  animation: gradientAnimation 3s infinite;
+}
+
+.prev-semester-container {
+  position: fixed;
+  right: 25px;
+  top: 20px;
+  font-size: 12px;
+  display: flex;
+}
+
+.prev-semester-container a,
+.prev-semester-container p {
+  margin: 0px 5px;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 15px;
+  margin: 50px;
+}
+
+/* PROJECT PAGE */
+
+.title-container {
+  /* background-color: white; */
+  padding: 30px;
+  width: 16%;
+  min-width: 215px;
+  max-width: 480px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  text-align: left;
+  z-index: 300;
+}
+
+.title-container h1 {
+  font-size: 55px;
+  font-weight: 200;
+}
+
+.title-container h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.title-container h3 {
+  font-size: 1.2rem;
+}
+
+.title-container hr {
+  border: 0.5px solid black;
+  margin: 20px 0 50px 0;
+}
+
+#project-box-container {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 75%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.project-box {
+  z-index: 100;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* cursor: pointer; */
+}
+
+.project-box:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: linear-gradient(
+    -65deg,
+    #e9ff39,
+    #8cff1f,
+    #00c6cc,
+    #f08ed3,
+    #ed3737
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s infinite;
+}
+
+.project-title {
+  /* background-color: blueviolet; */
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.project-student-name {
+  /* background-color: blue; */
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(
+    -65deg,
+    #e9ff39,
+    #8cff1f,
+    #00c6cc,
+    #f08ed3,
+    #ed3737
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 800% 800%;
+
+  /* animation: gradientAnimation 10s infinite; */
+
+  animation-name: gradientAnimation;
+  /* animation-duration: 10s; */
+  /* Dutation will be randomly assigned in script*/
+  animation-iteration-count: infinite;
+}
+
+.prev-next-button-container {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  /* Index Pages */
+  .main-title-container,
+  .main-section-container,
+  .footer {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .prev-semester-container {
+    display: none;
+  }
+  
+  .main-title {
+    padding: 30px;
+    font-size: 70px;
+    text-align: center;
+  }
+  
+  .main-semester {
+    display: block;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .section-link {
+    text-align: center;
+  }
+
+  /* Project Pages */
+  .title-container {
+    width: calc(100% - 120px);
+    min-width: none;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  #project-box-container {
+    position: static;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .project-box {
+    justify-content: center;
+    align-items: center;
+  }
+}

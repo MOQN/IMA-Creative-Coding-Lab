@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+h1,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+canvas {
+  display: block;
+}
+
+.title-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  text-align: right;
+}
+
+.img-container {
+  z-index: 10;
+  position: absolute;
+  height: 100%;
+}
+
+img {
+  height: 100%;
+}
+
+.box-project {
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.box-title {
+  /* background-color: blueviolet; */
+  /* width: 60px; */
+  /* height: 20px; */
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.box-name {
+  /* background-color: rgb(20, 194, 194); */
+  /* width: 60px; */
+  /* height: 20px; */
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.maintitle-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: DeepPink;
+}
+.button-main {
+  margin: 33px;
+  float: left;
+  font-size: 17px;
+  font-weight: 900;
+  
+  background-color: white;
+/*   position: absolute; */
+/*   transform: translate(-50%, -50%); */
+/*   z-index: 20; */
+  width: 60px;
+  height: 60px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
