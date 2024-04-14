@@ -46,26 +46,29 @@ p {
 
 .title-container {
   position: absolute;
-  right: 5rem;
-  bottom: 5rem;
-  text-align: right;
-}
-
-.section-title-container {
-  position: absolute;
-  left: 25vw;
+  left: 20vw;
   top: 50vh;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
+}
+
+.creature-container-rotator {
+  position: relative;
+  left: 20vw;
+  top: 50vh;
+  transform-origin: left top;
+  /* animation: rotateItem 720s linear infinite; */
 }
 
 .creature-container {
+  /* the code below is not necessary as they are used in the rotator above. */
+  /*
   position: relative;
-  left: 25vw;
+  left: 20vw;
   top: 50vh;
-  background-color: aquamarine;
+  */
   transform-origin: left top;
-  animation: rotateItem 120s linear infinite;
+  animation: rotateItem 720s linear infinite;
 }
 
 .creature-item {
@@ -102,8 +105,8 @@ p {
 }
 
 .creature-item h3:hover {
-  background-color: #0FB;
-  color: black;
+  /* background-color: #0FB; */
+  /* color: black; */
 }
 
 .creature-item p {
