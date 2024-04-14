@@ -46,7 +46,7 @@ p {
 
 .title-container {
   position: absolute;
-  left: 20vw;
+  left: 22vw;
   top: 50vh;
   transform: translate(-50%, -50%);
   text-align: left;
@@ -54,7 +54,7 @@ p {
 
 .creature-container-rotator {
   position: relative;
-  left: 20vw;
+  left: 22vw;
   top: 50vh;
   transform-origin: left top;
   /* animation: rotateItem 720s linear infinite; */
