@@ -1,4 +1,4 @@
-# Nature of Code | Spring 2025
+# Creative Coding Lab | Spring 2025
 
 Interactive Media Arts (IMA) at NYU Shanghai
 
