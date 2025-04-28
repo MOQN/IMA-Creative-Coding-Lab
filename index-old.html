@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    // https://docsify.js.org/#/
+    window.$docsify = {
+      // loadNavbar: true,
+      // loadSidebar: true,
+      loadSidebar: '_sidebar.md',
+      alias: {
+        '/.*/_sidebar.md': '_sidebar.md'
+      },
+      autoSidebar: true,
+      subMaxLevel: 3,
+      name: '',
+      repo: '',
+      executeScript: true,
+      auto2top: true,
+    };
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/docsify-plugin-auto-sidebar/dist/docsify-plugin-auto-sidebar.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+  <script>
+    function loadCodeBlock(folder) {
+      console.log('Loading code block from folder:', folder);
+
+      // create <a> to link to the folder
+      const link = document.createElement('a');
+      link.setAttribute('href', folder)
+      link.setAttribute('target', '_blank')
+      link.textContent = 'Open and run this sketch!';
+      document.getElementById('main').appendChild(link);
+
+      // create <pre><code> structure
+      const pre = document.createElement('pre');
+      const code = document.createElement('code');
+      code.id = 'code-block';
+      code.className = 'language-javascript';
+      pre.appendChild(code);
+      document.getElementById('main').appendChild(pre);
+
+      // fetch and insert the JS file content
+      fetch(folder + '/sketch.js')
+        .then(response => response.text())
+        .then(text => {
+          console.log('Code block loaded:', text);
+          code.textContent = text;
+          if (window.Prism) {
+            Prism.highlightAll();
+          }
+        })
+        .catch(error => console.error('Failed to load code:', error));
+    }
+  </script>
+</body>
+
+</html>
